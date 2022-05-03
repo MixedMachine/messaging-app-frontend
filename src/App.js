@@ -28,7 +28,6 @@ function App() {
     channel.bind('inserted', (data) => {
       setMessages([...messages, data])
     });
-    console.log("pusher triggered")
     return () => {
       channel.unbind_all()
       channel.unsubscribe()
