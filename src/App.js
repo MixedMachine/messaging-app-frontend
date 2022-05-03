@@ -17,7 +17,7 @@ function App() {
       setMessages(res.data)
     })
     console.log("sync triggered")
-  })
+  }, [])
 
   useEffect(() => {
     const pusher = new Pusher(`${process.env.REACT_APP_PUSHER_APIKEY}`, {
